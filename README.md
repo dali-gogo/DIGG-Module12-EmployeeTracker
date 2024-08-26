@@ -5,7 +5,7 @@ Dalia Gomez - Module 12 Challenge: SQL, Employee Tracker.
 The purpose of this challenge was to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer and PostgreSQL.
 
 ## Links
-- URL of the GitHub repository that contains the code: 
+- URL of the GitHub repository that contains the code: https://github.com/dali-gogo/DIGG-Module12-EmployeeTracker
 
 ## User Story
 AS A business owner
