@@ -4,7 +4,6 @@ const db = require('./db');
 
 init();
 
-// Display logo text, load main prompts
 function init() {
   const logoText = logo({ name: 'Employee Manager' }).render();
 
@@ -84,7 +83,6 @@ function loadMainPrompts() {
       },
     ]).then((res) => {
       let choice = res.choice;
-      // Call the appropriate function depending on what the user chose
       switch (choice) {
         case 'VIEW_EMPLOYEES':
           viewEmployees();
@@ -200,7 +198,6 @@ db.findAllEmployees().then(({ rows }) => {
 });
 }
 
-  // Delete an employee
 function removeEmployee() {
 db.findAllEmployees().then(({ rows }) => {
     let employees = rows;
@@ -306,7 +303,6 @@ db.findAllEmployees().then(({ rows }) => {
 });
 }
 
-// View all roles
 function viewRoles() {
 db.findAllRoles()
     .then(({ rows }) => {
@@ -317,7 +313,6 @@ db.findAllRoles()
     .then(() => loadMainPrompts());
 }
 
-// Add a role
 function addRole() {
 db.findAllDepartments().then(({ rows }) => {
     let departments = rows;
@@ -372,7 +367,6 @@ db.findAllRoles().then(({ rows }) => {
 });
 }
 
-// View all deparments
 function viewDepartments() {
 db.findAllDepartments()
     .then(({ rows }) => {
@@ -397,7 +391,6 @@ prompt([
 });
 }
 
-// Delete a department
 function removeDepartment() {
 db.findAllDepartments().then(({ rows }) => {
     let departments = rows;
@@ -419,7 +412,6 @@ db.findAllDepartments().then(({ rows }) => {
 });
 }
 
-// View all departments and show their total utilized department budget
 function viewUtilizedBudgetByDepartment() {
 db.viewDepartmentBudgets()
     .then(({ rows }) => {
